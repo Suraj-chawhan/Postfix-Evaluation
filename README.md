@@ -31,8 +31,10 @@ int Postfix(char hunny[]) {
             Push(sp,hunny[i]-'0');
         }
         else {
-            int val2=Pop(sp);
-            int val1=Pop(sp);
+            int val2=sp->arr[sp->top];
+            Pop(sp);
+            int val1=sp->arr[sp->top];
+            Pop(sp);
 
             switch(hunny[i]) {
             case '*' :
